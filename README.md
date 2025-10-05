@@ -15,7 +15,6 @@ The key objectives include:
 - Forecasting future price trends using ARIMA  
 - Visualizing arbitrage regions based on geometric interpretations  
 - Exporting data and figures for reproducibility
-
 ---
 
 ## Directory Structure
@@ -58,6 +57,21 @@ geometric_arbitrage/
 
 - **`notebooks/arbitrage_script.ipynb`**  
   Interactive version of the pipeline for exploration in Jupyter.
+---
+
+## Visualizations
+
+### Plot the price-volume curves
+
+![](https://github.com/lshpaner/geometric_arbitrage/blob/main/images/price_volume_curve.png)
+
+### Plot the closing prices
+
+![](https://github.com/lshpaner/geometric_arbitrage/blob/main/images/closing_prices.png)
+
+### Plot the forecasts
+
+![](https://github.com/lshpaner/geometric_arbitrage/blob/main/images/price_forecast.png)
 
 ---
 
