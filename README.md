@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 ```bash
 python arbitrage_script.py
-``
+```
 
 3. Or use the Jupyter notebook:
 
@@ -118,7 +118,7 @@ All material is provided for academic and research use.
 
 ## License
 
-[MIT License]()
+[MIT License](https://github.com/lshpaner/geometric_arbitrage/blob/main/LICENSE.md)
 
 ---
 
