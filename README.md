@@ -42,9 +42,6 @@ geometric_arbitrage/
 └── .gitignore
 ```
 
-> Note: Both `data/` and `images/` are excluded from version control using `.gitignore`.
-
-
 ---
 
 ## Main Components
