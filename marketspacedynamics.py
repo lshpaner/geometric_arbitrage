@@ -67,7 +67,7 @@ class MarketSpaceDynamics:
         plt.plot(x_values, y_values, label=label)
         plt.fill_between(x_values, y_values, alpha=0.2)
 
-    def plot_price_volume_curves(self, save_path=None):
+    def plot_price_volume_curves(self, legend_loc="best", save_path=None):
         # Get min and max volumes safely
         volume_min = min(
             float(self.data[ticker].filter(like="Volume").iloc[:, 0].min())
@@ -97,11 +97,11 @@ class MarketSpaceDynamics:
         plt.xlabel("Volume")
         plt.ylabel("Price")
         plt.title("Price-Volume Curves")
-        plt.legend()
+        plt.legend(loc=legend_loc)
         self.save_plot_if_needed(save_path)
         plt.show()
 
-    def plot_closing_prices(self, save_path=None):
+    def plot_closing_prices(self, legend_loc="best", save_path=None):
         plt.figure(figsize=(10, 6))
         for ticker in self.tickers:
             plt.plot(
@@ -112,7 +112,7 @@ class MarketSpaceDynamics:
         plt.xlabel("Date")
         plt.ylabel("Price")
         plt.title("Closing Prices Over Time")
-        plt.legend()
+        plt.legend(loc=legend_loc)
         self.save_plot_if_needed(save_path)
         plt.show()
 
@@ -141,7 +141,7 @@ class MarketSpaceDynamics:
         )
         return pd.DataFrame({"Date": forecast_index, "Forecast": forecast})
 
-    def plot_forecasts(self, steps, save_path=None):
+    def plot_forecasts(self, steps, legend_loc="best", save_path=None):
         forecast_dfs = {}
         plt.figure(figsize=(10, 6))
         for ticker in self.tickers:
@@ -161,7 +161,7 @@ class MarketSpaceDynamics:
         plt.xlabel("Date")
         plt.ylabel("Price")
         plt.title("Price Forecast")
-        plt.legend()
+        plt.legend(loc=legend_loc)
         self.save_plot_if_needed(save_path)
         plt.show()
         return forecast_dfs

@@ -19,7 +19,9 @@ analysis = MarketSpaceDynamics(
 
 ######################## Plot the price-volume curves ##########################
 
-analysis.plot_price_volume_curves(save_path="./images/price_volume_curve.png")
+analysis.plot_price_volume_curves(
+    legend_loc="lower left", save_path="./images/price_volume_curve.png"
+)
 
 ########################### Plot the closing prices ############################
 
